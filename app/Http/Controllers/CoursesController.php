@@ -55,9 +55,10 @@ class CoursesController extends Controller
      * @param  \App\Models\Courses  $courses
      * @return \Illuminate\Http\Response
      */
-    public function show(Courses $courses)
+    public function show(Request $request, $id)
     {
-        //
+        $course = Courses::find($id);
+        return $course;
     }
 
     /**
